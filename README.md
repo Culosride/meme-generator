@@ -1,2 +1,2 @@
-# React-Solo-Project
-React Solo Project from scrimba.com React course
+# Meme-Generator-Project
+Meme Generator Project from scrimba.com React course

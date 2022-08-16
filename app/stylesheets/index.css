@@ -1,5 +1,5 @@
-@import "cards.css";
-@import "nav.css";
+@import "header.css";
+@import "meme.css";
 
 :root {
   --text: #222222;
@@ -11,10 +11,8 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Karla", sans-serif;
   margin: 0;
-  color: var(--text);
-  background-color: var(--tertiary);
 }
 
 section {

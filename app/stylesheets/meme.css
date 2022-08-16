@@ -1,0 +1,25 @@
+.input-wrapper {
+  gap: 20px;
+  grid-template: 30px 40px / 1fr 1fr;
+  display: grid;
+  padding: 8px;
+  justify-content: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.input-wrapper > input {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  padding: 1px 6px;
+}
+
+.meme-btn {
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  color: white;
+  padding: 14px;
+  border: none;
+  grid-column: 1 / -1;
+  align-self: center;
+  border-radius: 2px;
+}

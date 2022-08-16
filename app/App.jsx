@@ -1,19 +1,12 @@
 import React from 'react'
-import Navbar from '../app/components/Navbar.jsx'
-import Card from '../app/components/Card.jsx'
-import data from './fake apis/data.js'
-
+import Header from '../app/components/Header.jsx'
+import Meme from '../app/components/Meme.jsx'
 
 export default function App() {
-  const cards = data.map(t => <Card
-      key = {t.key}
-      {...t}
-    />
+    return (
+        <div className='wrapper'>
+            <Header />
+            <Meme />
+        </div>
     )
-  return (
-    <div className='wrapper'>
-      <Navbar />
-      <section>{cards}</section>
-    </div>
-  )
 }
