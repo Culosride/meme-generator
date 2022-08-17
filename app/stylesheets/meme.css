@@ -23,3 +23,12 @@
   align-self: center;
   border-radius: 2px;
 }
+
+.meme-wrapper {
+  grid-column: 1 / -1;
+  align-self: center;
+}
+
+.meme-img {
+  width: 100%;
+}
