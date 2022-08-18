@@ -4,13 +4,18 @@ import React from "react"
 
 
 export default function Meme() {
-  const [img, setImg] = React.useState("")
+  const [img, setImg] = React.useState({
+    topText: "",
+    bottomText: "",
+    randomImage: ""
+  })
+
+  const [allMemeImages, setAllMemeImages] = React.useState(memesData)
 
   function getMemeImage() {
-    let randomUrl;
     const array = memesData.data.memes
-    randomUrl = array[Math.floor(Math.random() * array.length)].url
-    setImg(randomUrl)
+    const randomUrl = array[Math.floor(Math.random() * array.length)].url
+    setImg(img => ({...img, randomImage: randomUrl}))
   }
 
   return (
@@ -19,7 +24,7 @@ export default function Meme() {
         <input type="text" placeholder="Upper text"/>
         <input type="text" placeholder="Lower text"/>
         <button onClick={getMemeImage} className="meme-btn">GENERATE MEME</button>
-        <div className="meme-wrapper"><img src={img} className="meme-img" /></div>
+        <div className="meme-wrapper"><img src={img.randomImage} className="meme-img" /></div>
       </div>
     </section>
   )
