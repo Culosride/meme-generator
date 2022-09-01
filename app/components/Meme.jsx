@@ -15,6 +15,7 @@ export default function Meme() {
   console.log(img)
 
   function getMemeImage() {
+    [img.topText, img.bottomText] = ""
     const arrayMemes = allMemeImages.data.memes
     const randomUrl = arrayMemes[Math.floor(Math.random() * arrayMemes.length)].url
     setImg(img => ({...img, randomImage: randomUrl}))
