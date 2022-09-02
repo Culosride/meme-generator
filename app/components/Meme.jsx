@@ -1,4 +1,4 @@
-import memesData from "/home/andrea/meme-generator/memesData.js"
+// import memesData from "/home/andrea/meme-generator/memesData.js"
 import React from "react"
 
 
@@ -10,7 +10,7 @@ export default function Meme() {
     randomImage: ""
   })
 
-  const [allMemes, setAllMemes] = React.useState(memesData)
+  const [allMemes, setAllMemes] = React.useState([])
 
   React.useEffect(function() {
     fetch('https://api.imgflip.com/get_memes')
@@ -19,10 +19,12 @@ export default function Meme() {
   )}, [])
 
   function getMemeImage() {
-    [img.topText, img.bottomText] = ""
-    const arrayMemes = allMemes.data.memes
-    const randomUrl = arrayMemes[Math.floor(Math.random() * arrayMemes.length)].url
-    setImg(img => ({...img, randomImage: randomUrl}))
+    const randomUrl = allMemes[Math.floor(Math.random() * allMemes.length)].url
+    setImg(img => ({...img,
+      randomImage: randomUrl,
+      topText:"",
+      bottomText:""
+    }))
   }
 
   function handleChange(event) {
